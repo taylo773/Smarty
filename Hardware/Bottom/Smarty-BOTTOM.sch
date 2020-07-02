@@ -3327,8 +3327,13 @@ for Gain Control</text>
 </net>
 <net name="N$1" class="0">
 <segment>
-<wire x1="120.65" y1="-7.62" x2="110.49" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="120.65" y1="-7.62" x2="111.76" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="U4" gate="G$1" pin="OSCO"/>
+<pinref part="XTAL3" gate="G$1" pin="1"/>
+<wire x1="111.76" y1="-7.62" x2="110.49" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="113.03" y1="-5.08" x2="109.22" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="-5.08" x2="109.22" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="-7.62" x2="110.49" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
