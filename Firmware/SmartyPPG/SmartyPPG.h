@@ -7,7 +7,7 @@
 #include <Arduino.h>
 
 //Custom External Libraries
-#include <AD5242.h> //Linnes Lab Library- Need to Clone
+#include <AD524X.h> //Linnes Lab Library- Need to Clone
 
 
 class SmartyPPG
@@ -16,7 +16,7 @@ class SmartyPPG
 private:
 
     //Potentiometer to Control Gain of TIA and BPF
-    AD5242 ad5245; 
+    AD524X ad5242; 
     
     //Gain settings for Digital Potentiometers
     uint8_t R_LEDCurrent; 
