@@ -2436,7 +2436,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/703465986AD8611_2_0.pdf<
 <text x="15.24" y="134.62" size="2.54" layer="97" font="vector" ratio="15">Photodiode
 and LEDs</text>
 <text x="154.94" y="157.48" size="2.54" layer="97" font="vector" ratio="15">Active Bandpass Filters</text>
-<text x="162.56" y="68.58" size="2.54" layer="97" font="vector" ratio="15">Digital Potentiometers</text>
+<text x="162.56" y="76.2" size="2.54" layer="97" font="vector" ratio="15">Digital Potentiometers</text>
 <text x="66.04" y="157.48" size="2.54" layer="97" font="vector" ratio="15">Transimpedance Amplifier</text>
 <text x="134.62" y="27.94" size="1.778" layer="97" ratio="15">I2C Address: 0x2C</text>
 <text x="200.66" y="30.48" size="1.778" layer="97" ratio="15">I2C Address: 0x2D</text>
@@ -2448,15 +2448,15 @@ and LEDs</text>
 <wire x1="266.7" y1="172.72" x2="266.7" y2="-33.02" width="1.016" layer="94"/>
 <wire x1="266.7" y1="-33.02" x2="-5.08" y2="-33.02" width="1.016" layer="94"/>
 <wire x1="-5.08" y1="-33.02" x2="-5.08" y2="172.72" width="1.016" layer="94"/>
-<wire x1="0" y1="78.74" x2="45.72" y2="78.74" width="1.016" layer="97" style="longdash"/>
-<wire x1="45.72" y1="78.74" x2="101.6" y2="78.74" width="1.016" layer="97" style="longdash"/>
-<wire x1="101.6" y1="78.74" x2="261.62" y2="78.74" width="1.016" layer="97" style="longdash"/>
-<wire x1="101.6" y1="78.74" x2="101.6" y2="22.86" width="1.016" layer="97" style="longdash"/>
+<wire x1="0" y1="83.82" x2="45.72" y2="83.82" width="1.016" layer="97" style="longdash"/>
+<wire x1="45.72" y1="83.82" x2="101.6" y2="83.82" width="1.016" layer="97" style="longdash"/>
+<wire x1="101.6" y1="83.82" x2="261.62" y2="83.82" width="1.016" layer="97" style="longdash"/>
+<wire x1="101.6" y1="83.82" x2="101.6" y2="22.86" width="1.016" layer="97" style="longdash"/>
 <wire x1="101.6" y1="22.86" x2="101.6" y2="-27.94" width="1.016" layer="97" style="longdash"/>
 <wire x1="101.6" y1="22.86" x2="261.62" y2="22.86" width="1.016" layer="97" style="longdash"/>
 <wire x1="101.6" y1="22.86" x2="60.96" y2="22.86" width="1.016" layer="97" style="longdash"/>
 <wire x1="60.96" y1="22.86" x2="0" y2="22.86" width="1.016" layer="97" style="longdash"/>
-<wire x1="45.72" y1="167.64" x2="45.72" y2="78.74" width="1.016" layer="97" style="longdash"/>
+<wire x1="45.72" y1="167.64" x2="45.72" y2="83.82" width="1.016" layer="97" style="longdash"/>
 <text x="12.7" y="91.44" size="1.778" layer="97">Connection to 
 Optical Sensor Module</text>
 <text x="215.9" y="101.6" size="1.778" layer="97">Connection to 
@@ -2470,9 +2470,15 @@ for Gain Control</text>
 <wire x1="60.96" y1="22.86" x2="60.96" y2="-27.94" width="1.016" layer="97" style="longdash"/>
 <text x="7.62" y="12.7" size="2.54" layer="97" font="vector" ratio="15">Accelerometer and Gyroscope</text>
 <text x="76.2" y="15.24" size="2.54" layer="97" font="vector" ratio="15">Pins</text>
-<text x="22.86" y="71.12" size="2.54" layer="97" font="vector" ratio="15">Vref Generator and Bypass Capacitors</text>
+<text x="22.86" y="76.2" size="2.54" layer="97" font="vector" ratio="15">Vref Generator and Bypass Capacitors</text>
 <text x="143.51" y="-17.78" size="1.27" layer="97">I2C Address = 0x68h</text>
 <text x="115.57" y="8.89" size="4.318" layer="97" font="vector" ratio="15">Real-Time Clock (RTC)</text>
+<text x="218.44" y="66.04" size="1.778" layer="97">I_B = (3.3V-0.6V) / (R_pot + R16)
+LED_current = I_B * Gain
+
+Current gain of an NPN transistor is 
+often written as HFE in datasheets</text>
+<text x="71.12" y="104.14" size="1.778" layer="97">Gain = -Rf (in pass band)</text>
 </plain>
 <instances>
 <instance part="U$3" gate="G$1" x="20.32" y="119.38" smashed="yes"/>

@@ -15,31 +15,41 @@ class SmartyPPG
 
 private:
 
-    AD5242 ad5245; //Potentiometer to Control Gain of TIA and BPF
+    //Potentiometer to Control Gain of TIA and BPF
+    AD5242 ad5245; 
+    
+    //Gain settings for Digital Potentiometers
+    uint8_t R_LEDCurrent; 
+    uint8_t R_TIAGain; 
+    uint8_t R_PPGGain; 
 
-    uint8_t LEDCurrent; 
-    uint8_t TIAGain; 
-    uint8_t BPFGain; 
+    bool LEDState; //true = ON, false = OFF
 
 
 public:
 
-    SmartyPPG(); //Default Constructer
+    SmartyPPG(); //Default Constructer- Must be called before setup in .ino code
+    void begin(); //Must be called in setup in .ino code
 
-    void turnLEDOn() const;       //Turn LED ON
-    void turnLEDOff() const;      //Turn LED OFF
-    void setLEDCurrent();         //Control LED Brightness
+    //Controls LED
+    void turnLEDOn();       //Turn LED ON
+    void turnLEDOff();      //Turn LED OFF
+    bool getLEDStatus() const;
+    void setLEDCurrent(uint8_t val);         //Control LED Brightness
     uint8_t getLEDCurrent() const;
     
-    void setTIAGain();            //Control Gain of Transimpedance Amplifier (TIA)
+    //Transimpedance Amplifier (TIA) Gain Control
+    void setTIAGain(uint8_t gain);
     uint8_t getTIAGain() const;
     
-    void setBPFGain();            //Control Gain of Bandpass Filter
-    uint8_t getBPFGain() const;
+    //Control Gain of Bandpass Filter (BPF)
+    void setPPGGain(uint8_t gain);
+    uint8_t getPPGGain() const;
 
-    uint16_t getTIA();            //TIA Voltage
-    uint16_t getBPF();            //PPG and BPF Voltage
+    //Read voltage of PPG Circuit
+    uint16_t getTIA() const;            //TIA Voltage
+    uint16_t getPPG() const;            //PPG and BPF Voltage
 
-}
+};
 
 #endif /*SmartyPPG_h*/
