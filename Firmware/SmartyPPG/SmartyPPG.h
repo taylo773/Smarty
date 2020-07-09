@@ -37,10 +37,12 @@ public:
     bool getLEDStatus() const;
     void setLEDCurrent(uint8_t val);         //Control LED Brightness
     uint8_t getLEDCurrent() const;
+    void balanceLEDCurrent();
     
     //Transimpedance Amplifier (TIA) Gain Control
     void setTIAGain(uint8_t gain);
     uint8_t getTIAGain() const;
+    void balanceTIAGain();
     
     //Control Gain of Bandpass Filter (BPF)
     void setPPGGain(uint8_t gain);
