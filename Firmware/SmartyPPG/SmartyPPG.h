@@ -7,7 +7,7 @@
 #include <Arduino.h>
 
 //Custom External Libraries
-#include <AD524X.h> //Linnes Lab Library- Need to Clone
+#include <AD524X.h> //Linnes Lab Library
 
 
 class SmartyPPG
@@ -24,7 +24,6 @@ private:
     uint8_t R_PPGGain; 
 
     bool LEDState; //true = ON, false = OFF
-
 
 public:
 

@@ -1,7 +1,7 @@
 
 #include "SmartyPPG.h"
 
-const uint8_t LEDPin = 30;
+const uint8_t LEDPin = 2; //Was Pin 30
 const uint8_t PPGPin = A4;
 const uint8_t TIAPin = A5;
 const uint8_t AD5171_address = 0x2D;
@@ -21,8 +21,8 @@ void SmartyPPG::begin()
 {
     pinMode(LEDPin, OUTPUT);
     turnLEDOff();
-    analogReadResolution(12); //12 bits: Returns Number between 0-495
-    setLEDCurrent(63); //Smallest LED Current (Largest Resistance)
+//    analogReadResolution(12); //12 bits: Returns Number between 0-495
+//    setLEDCurrent(63); //Smallest LED Current (Largest Resistance)
     ad5242 = AD524X(AD5242_address);
 
 }
@@ -32,6 +32,7 @@ void SmartyPPG::turnLEDOn()       //Turn LED ON
 {
     digitalWrite(LEDPin, HIGH);
     LEDState = true;
+    Serial.println("LED ON");
 }
 
 //Turns off LED by writing LOT to pin, LED is driven using NPN bipolar junction transistor (BJT)
@@ -39,6 +40,7 @@ void SmartyPPG::turnLEDOff()     //Turn LED OFF
 {
     digitalWrite(LEDPin, LOW);
     LEDState = false;
+    Serial.println("LED OFF");
 }
 
 //Returns whether or not LED is on (true) or off (false)
